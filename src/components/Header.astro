@@ -1,0 +1,116 @@
+---
+// Add client-side script for menu toggle
+---
+
+<header
+  id="header-bg"
+  class="sticky top-0 z-50 py-4 px-8 font-semibold text-xl transition-all"
+>
+  <div class="flex justify-between w-full xl:w-[1120px] mx-auto">
+    <div
+      id="logoContent"
+      class="flex items-center gap-2 md:translate-x-56 opacity-0 transition-all"
+    >
+      <img
+        class="w-10 h-10 rounded-full object-cover"
+        src="/images/dacyzdev_photo.webp"
+        alt="dacyzdev"
+      />
+      <span
+        id="logoText"
+        class="font-bold text-2xl -translate-y-2 md:translate-y-0 transition-all"
+      >
+        Dacyz<span class="text-blue-400">Dev</span>
+      </span>
+    </div>
+
+    <!-- Hamburger button for mobile -->
+    <button
+      id="menu-button"
+      class="sticky top-0 md:hidden flex items-center"
+      aria-label="Toggle menu"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation menu -->
+    <nav
+      id="nav-menu"
+      class="items-center md:-translate-x-full flex md:flex flex-col md:flex-row gap-y-4 md:gap-y-0 md:gap-x-6 absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto md:bg-transparent p-4 md:p-0 shadow-lg md:shadow-none dark:bg-gray-800/40 dark:backdrop-blur-md md:dark:bg-transparent md:dark:dark:backdrop-blur-none transition-all"
+    >
+      <a href="#aboutme" class="hover:text-blue-400 transition-colors"
+        >About Me</a
+      >
+      <a href="#experience" class="hover:text-blue-400 transition-colors"
+        >Experience</a
+      >
+      <a href="#projects" class="hover:text-blue-400 transition-colors"
+        >Projects</a
+      >
+      <a href="#contact" class="hover:text-blue-400 transition-colors"
+        >Contact</a
+      >
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Toggle menu on mobile
+  const menuButton = document.getElementById("menu-button");
+  const navMenu = document.getElementById("nav-menu");
+
+  menuButton?.addEventListener("click", () => {
+    navMenu?.classList.toggle("hidden");
+  });
+
+  navMenu?.classList.toggle("hidden");
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      !menuButton?.contains(e.target as Node) &&
+      !navMenu?.contains(e.target as Node)
+    ) {
+      navMenu?.classList.add("hidden");
+    }
+  });
+  
+  window.addEventListener("scroll", () => {
+    const logoText = document.getElementById("logoText");
+    const logoContent = document.getElementById("logoContent");
+    const headerBg = document.getElementById("header-bg");
+    const scrollPercent = window.scrollY / window.innerHeight;
+    if (scrollPercent > 0.1) {
+      navMenu?.classList.remove("md:-translate-x-full");
+    } else {
+      navMenu?.classList.add("md:-translate-x-full");
+    }
+    if (scrollPercent > 0.2) {
+      headerBg?.classList.add("dark:bg-gray-800/40", "dark:backdrop-blur-md");
+      logoContent?.classList.remove("md:translate-x-56", "opacity-0");
+      logoContent?.classList.add("translate-x-0", "opacity-100");
+      logoText?.classList.remove("-translate-y-2");
+      logoText?.classList.add("translate-y-0");
+    } else {
+      headerBg?.classList.remove(
+        "dark:bg-gray-800/40",
+        "dark:backdrop-blur-md"
+      );
+      logoContent?.classList.remove("translate-x-0", "opacity-100");
+      logoContent?.classList.add("md:translate-x-56", "opacity-0");
+      logoText?.classList.remove("translate-y-0");
+      logoText?.classList.add("-translate-y-2");
+    }
+  });
+</script>
