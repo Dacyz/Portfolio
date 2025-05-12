@@ -1,0 +1,64 @@
+---
+import GitHub from "../icons/GitHub.astro";
+import Gmail from "../icons/Gmail.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import SocialPill from "./SocialPill.astro";
+import WhatsApp from "../icons/WhatsApp.astro";
+import PhoneCall from "../icons/PhoneCall.astro";
+---
+
+<footer class="bg-gray-900 text-white pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10">
+    <!-- Logo y descripción -->
+    <div class="md:col-span-1">
+      <div class="flex items-center space-x-2 mb-4">
+        <!-- Reemplaza por tu logo si tienes -->
+        <span class="text-2xl font-bold"
+          >Dacyz<span class="text-blue-400">Dev</span></span
+        >
+      </div>
+      <p class="text-gray-400 mb-6">
+        <span class="font-semibold"> Let’s connect! </span>
+        <br />
+        I'm always open to discussing new projects, creative ideas, or opportunities
+        to be part of your vision. Feel free to reach out via email or through my
+        social channels <br />— I’d love to hear from you.
+      </p>
+    </div>
+    <div class="flex flex-row flex-wrap gap-x-2 items-start">
+      <h3 class="w-full text-xl font-semibold">My social channels</h3>
+      <SocialPill href="https://github.com/dacyzdev">
+        <GitHub class="size-6" />
+        <span class="hidden md:inline">/dacyzdev</span>
+      </SocialPill>
+      <SocialPill href="https://www.linkedin.com/in/diegoyanguam/">
+        <LinkedIn class="size-6" />
+        <span class="hidden md:inline">/diegoyanguam</span>
+      </SocialPill>
+      <SocialPill href="mailto:diegoyanguam@gmail.com">
+        <Gmail class="size-6" />
+        <span class="hidden md:inline">diegoyanguam@gmail.com</span>
+      </SocialPill>
+      <SocialPill href="https://wa.me/51992058519?text=Hi%2C%20I%20would%20like%20to%20contact%20you.">
+        <WhatsApp class="size-6" />
+        <span class="hidden md:inline">+51 992 058 519</span>
+      </SocialPill>
+      <SocialPill href="tel:51992058519">
+        <PhoneCall class="size-6" />
+        <span class="hidden md:inline">+51 992 058 519</span>
+      </SocialPill>
+    </div>
+  </div>
+
+  <hr class="border-gray-700 my-8" />
+
+  <!-- Footer base -->
+  <div
+    class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+  >
+    <p class="mb-4 md:mb-0">&copy; 2025 Dacyz Dev Ltd.</p>
+    <div class="flex space-x-2">
+      <p class="mb-2">Currenly working for FRACTAL and Mendieta Group</p>
+    </div>
+  </div>
+</footer>
