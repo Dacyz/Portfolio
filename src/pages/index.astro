@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
+import GMail from "../icons/Gmail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Container from "../components/Container.astro";
+import TimelineFilter from "../components/Experience/TimelineFilter.tsx";
+import { EXPERIENCES } from "../components/Experience/experience.ts";
+import ProjectSection from "../components/Projects/Projects";
+import Header from "../components/Header.astro";
+---
+
+<Layout
+  title="Dacyz Dev - Desarrollador y Programador Mobile con 3 años de experiencia"
+  description="Contrata a Dacyz Dev para desarrollador, crear o programador aplicaciones moviles"
+>
+  <Header />
+  <main>
+    <Container class="py-4 h-[100dvh] md:pt-24 md:pb-24 md:h-auto items-start justify-center flex flex-col">
+      <img
+        class="w-52 h-52 pb-2 rounded-full object-cover"
+        src="/images/dacyzdev_photo.webp"
+        alt="dacyzdev"
+      />
+      <h1 class="text-5xl font-bold flex text-white flex-row pb-10">
+        <span class="hidden md:inline">Hey,&nbsp;</span>
+        Dacyz<span class="text-blue-400">Dev</span>&nbsp;
+        <span class="hidden md:inline">here</span>
+      </h1>
+      <p class="text-2xl text-wrap">
+        +3.5 years of experience.
+        <span class="text-blue-300"> Front-end Developer </span>
+        specialize on web and mobile applications with
+        <span class="text-blue-300"> Flutter</span>,
+        <span class="text-blue-300"> React </span>
+        and <span class="text-blue-300"> .NET </span>
+        . Graduate as Systems Engineering From Piura, Peru
+        <span class="inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+            <path fill="#D91023" d="m0,0h15v10H0"></path>
+            <path fill="#FFF" d="m5,0h5v10H5"></path>
+          </svg>
+        </span>.
+        <span class="opacity-70">
+          Self-declared enthusiast of innovative projects.
+        </span>
+      </p>
+      <nav class="flex gap-x-3 mt-4">
+        <SocialPill href="https://github.com/dacyzdev">
+          <GitHub class="size-6" />
+          <span class="hidden md:inline">/dacyzdev</span>
+        </SocialPill>
+        <SocialPill href="https://www.linkedin.com/in/diegoyanguam/">
+          <LinkedIn class="size-6" />
+          <span class="hidden md:inline">/diegoyanguam</span>
+        </SocialPill>
+        <SocialPill href="mailto:diegoyanguam@gmail.com">
+          <GMail class="size-6" />
+          <span class="hidden md:inline">diegoyanguam@gmail.com</span>
+        </SocialPill>
+      </nav>
+    </Container>
+    <Container id="experience">
+      <h2 class="text-2xl mb-2 font-semibold">
+        My Achievements and Experience
+      </h2>
+      <TimelineFilter experiences={EXPERIENCES} client:load />
+    </Container>
+    <Container full id="projects">
+      <h2 class="text-2xl mb-2 font-semibold lg:w-[740px] px-8 mx-auto">My personal projects</h2>
+      <ProjectSection client:load />
+    </Container>
+  </main>
+</Layout>

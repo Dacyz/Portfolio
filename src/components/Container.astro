@@ -1,0 +1,10 @@
+---
+const { full } = Astro.props;
+---
+
+<section
+  id={Astro.props.id}
+  class={`w-full ${full !== true && "lg:w-[740px] px-8"} ${Astro.props.class} mx-auto`}
+>
+  <slot />
+</section>
