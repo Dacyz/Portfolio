@@ -4,6 +4,16 @@ import ProjectCarousel from "./Carousel";
 
 const projects: Project[] = [
   {
+    title: "Isometric HPE",
+    description:
+      "A home exercise flutter project",
+    language: "Flutter project",
+    imageUrl:
+      "/images/projects/isometric-hpe/isometric-hpe-captures.webp",
+    updated_at: "2025-05-06T13:25:05Z",
+    link: "https://play.google.com/store/apps/details?id=com.dacydev.app_position",
+  },
+  {
     title: "Adaptive display (adaptive_display)",
     description:
       "A abstract widget around BoxConstrains to make them easier to use and more reusable.",

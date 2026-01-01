@@ -9,6 +9,18 @@ export type ExperienceModel = {
 export const EXPERIENCES = <ExperienceModel[]>[
   {
     category: "job",
+    title: "Mobile Especialist",
+    company: "Seidor (BANBIF)",
+    location: "Lima, Perú (Hibrid)",
+    description: `<ol class="text-base font-normal text-gray-600 dark:text-gray-500">
+      <li> Developed apps: New Banbif App</li>
+      <li> Cross-platforms: iOS, Android, Onpremise & Web.</li>
+      <li> Kit: React Native & .NET.</li>
+    </ol>`,
+    duration: "Jun. 2025 - Present",
+  },
+  {
+    category: "job",
     title: "Flutter Developer",
     company: "Grupo Mendieta",
     location: "Lima, Perú (Remote)",
@@ -17,7 +29,7 @@ export const EXPERIENCES = <ExperienceModel[]>[
       <li> Cross-platforms: iOS, Android & Windows.</li>
       <li> Kit: BloC, Cubit & Clean Architecture.</li>
     </ol>`,
-    duration: "Jan. 2025 - Present",
+    duration: "Jan. 2025 - Present (Freelance)",
   },
   {
     category: "study",

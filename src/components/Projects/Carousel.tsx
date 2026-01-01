@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import {capitalize, formatShortDate, timeAgo} from "../../core/helper.ts";
 
 export type Project = {
   title: string;
@@ -65,7 +66,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({ projects }) => {
                 </p>
               )}
               <time className="text-gray-600 dark:text-gray-400 mt-2">
-                {project.updated_at}
+                {project.updated_at && capitalize(timeAgo(project.updated_at))} ({project.updated_at && formatShortDate(project.updated_at)})
               </time>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
                 {project.description}

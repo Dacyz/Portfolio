@@ -26,14 +26,14 @@ export default function TimelineFilter({
     <>
       <div className="flex items-center justify-start space-x-4 ">
         <button
-          onClick={() => (study ? job && setStudy(false) : setStudy(true))}
+          onClick={() => (study ? job && setJob(false) : setStudy(true))}
           className={`cursor-pointer text-xl font-semibold flex gap-x-3 items-center flex-row ${study ? "text-yellow-300 " : "text-yellow-100 opacity-50 hover:opacity-100"}`}
         >
           <BooksIcon />
           Studies
         </button>
         <button
-          onClick={() => (job ? study && setJob(false) : setJob(true))}
+          onClick={() => (job ? study && setStudy(false) : setJob(true) )}
           className={`cursor-pointer text-xl font-semibold flex gap-x-3 items-center flex-row ${job ? "text-blue-300 " : "text-blue-100 opacity-50 hover:opacity-100"}`}
         >
           <BriefcaseIcon />
