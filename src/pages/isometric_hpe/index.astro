@@ -1,0 +1,211 @@
+---
+import Container from "../../components/Container.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+    title="Isometric HPE - Ejecitate en casa"
+    description=""
+    icon="/icon/isometric-hpe.ico"
+>
+    <!-- Mobile -->
+    <img
+        src="/images/projects/isometric-hpe/background-isometric-header.webp"
+        class="block md:hidden h-[15dvh] object-cover blur-lg z-0 mb-[-120px]"
+    />
+
+    <!-- Desktop -->
+    <img
+        src="/images/projects/isometric-hpe/background-isometric-header-zoomout.webp"
+        class="hidden md:block h-[30dvh] object-cover md:mb-[-280px] blur-md z-0 object-[50%_60%]"
+    />
+
+    <section
+        class="mx-auto max-w-4xl py-4 md:pt-24 md:pb-24 md:h-auto items-start justify-center flex flex-row"
+    >
+        <img
+            src="/icon/isometric-hpe.ico"
+            height="124px"
+            width="124px"
+            class="md:mr-2 z-10"
+        />
+        <div class="my-auto z-10">
+            <h1 class="text-4xl font-bold mb-2">Isometric HPE</h1>
+            <p class="text-sm text-gray-400">
+                Última actualización: 01 Ene. 2026
+            </p>
+        </div>
+    </section>
+    <section class="max-w-4xl mx-auto mt-2 mb-20 px-8 md:p-12">
+        <h2 class="text-3xl font-semibold">
+            Entrena con feedback inteligente en tiempo real
+        </h2>
+
+        <p class="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+            Descarga <strong>Isometric HPE</strong> y comienza a entrenar ejercicios
+            isométricos desde casa con correcciones visuales y por voz, como si tuvieras
+            un entrenador personal contigo.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <!-- Google Play -->
+            <a
+                href="https://play.google.com/store/apps/details?id=com.dacydev.app_position"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center
+               px-6 py-3 rounded-xl
+               bg-white hover:bg-blue-500
+               hover:text-white
+               text-black font-medium
+               transition"
+            >
+                <img
+                    src="/icon/play-store-icon.webp"
+                    height="24px"
+                    width="24px"
+                    class="mr-2"
+                /> Descargar en Google Play
+            </a>
+
+            <!-- App Store -->
+            <div
+                class="inline-flex items-center justify-center
+               px-6 py-3 rounded-xl
+               border border-white/20
+               text-gray-400 cursor-not-allowed"
+                title="Próximamente en App Store"
+            >
+                <img
+                    src="/icon/app_store-icon.png"
+                    height="24px"
+                    width="24px"
+                    class="mr-2"
+                /> App Store · Próximamente
+            </div>
+        </div>
+        <p class="text-xs text-gray-400 mt-2">
+            Puedes revisar los términos y condiciones <a
+                href="isometric_hpe/terms"
+                class="hover:text-gray-300 transition"
+            >
+                aquí.
+            </a>
+        </p>
+    </section>
+    <section class="max-w-4xl mx-auto space-y-16 px-8 mb-20">
+        <!-- Intro -->
+        <div class="space-y-4">
+            <h2 class="text-2xl font-semibold">
+                Entrena en casa con precisión profesional
+            </h2>
+            <p class="text-gray-300 leading-relaxed">
+                <strong>Isometric HPE</strong> es una aplicación diseñada para ayudarte
+                a realizar ejercicios isométricos de forma correcta y segura desde
+                casa. Funciona como un entrenador personal inteligente, analizando
+                tu postura en tiempo real y proporcionándote retroalimentación inmediata
+                para mejorar tu técnica y evitar lesiones.
+            </p>
+        </div>
+
+        <!-- How it works -->
+        <div class="space-y-6">
+            <h2 class="text-2xl font-semibold">¿Cómo funciona?</h2>
+
+            <p class="text-gray-300 leading-relaxed">
+                La aplicación utiliza tecnología de <strong
+                    >Human Pose Estimation (HPE)</strong
+                >
+                para detectar la posición de tu cuerpo mientras realizas los ejercicios.
+                A partir de este análisis, Isometric HPE evalúa si tu postura es correcta
+                y te guía para realizar los ajustes necesarios.
+            </p>
+
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>Detecta la postura corporal en tiempo real</li>
+                <li>Analiza la alineación y estabilidad del cuerpo</li>
+                <li>Identifica errores comunes en ejercicios isométricos</li>
+                <li>Proporciona correcciones claras y comprensibles</li>
+            </ul>
+        </div>
+
+        <!-- Features -->
+        <div class="space-y-6">
+            <h2 class="text-2xl font-semibold">
+                Entrenador inteligente en tiempo real
+            </h2>
+
+            <p class="text-gray-300 leading-relaxed">
+                Isometric HPE actúa como un entrenador personal virtual,
+                ofreciendo <strong>feedback visual y por voz</strong> mientras entrenas.
+                No necesitas experiencia previa: la aplicación te indica exactamente
+                qué debes corregir para ejecutar cada ejercicio de manera adecuada.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-5 rounded-lg bg-white/5 border border-white/10">
+                    <h3 class="font-semibold mb-2">🎧 Feedback por voz</h3>
+                    <p class="text-sm text-gray-300">
+                        Recibe indicaciones auditivas en tiempo real para
+                        corregir tu postura sin necesidad de mirar la pantalla
+                        constantemente.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-lg bg-white/5 border border-white/10">
+                    <h3 class="font-semibold mb-2">🧍 Correcciones visuales</h3>
+                    <p class="text-sm text-gray-300">
+                        Observa en pantalla los puntos del cuerpo que deben
+                        ajustarse para mantener una posición correcta.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-lg bg-white/5 border border-white/10">
+                    <h3 class="font-semibold mb-2">⏱️ Control del ejercicio</h3>
+                    <p class="text-sm text-gray-300">
+                        Mantén la postura durante el tiempo recomendado y recibe
+                        avisos cuando el ejercicio ha sido completado
+                        correctamente.
+                    </p>
+                </div>
+
+                <div class="p-5 rounded-lg bg-white/5 border border-white/10">
+                    <h3 class="font-semibold mb-2">🏠 Entrena desde casa</h3>
+                    <p class="text-sm text-gray-300">
+                        No necesitas equipamiento especial ni acudir a un
+                        gimnasio. Solo tu dispositivo y un espacio cómodo.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="space-y-6">
+            <h2 class="text-2xl font-semibold">
+                Beneficios del entrenamiento isométrico
+            </h2>
+
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                <li>
+                    Mejora de la fuerza muscular sin movimientos repetitivos
+                </li>
+                <li>Reducción del riesgo de lesiones</li>
+                <li>Mayor control y conciencia corporal</li>
+                <li>Ideal para rehabilitación y fortalecimiento progresivo</li>
+            </ul>
+        </div>
+
+        <!-- Closing -->
+        <div class="space-y-4">
+            <h2 class="text-2xl font-semibold">
+                Diseñado para entrenar de forma segura y efectiva
+            </h2>
+            <p class="text-gray-300 leading-relaxed">
+                Isometric HPE está pensado para personas que desean mejorar su
+                condición física desde casa, con la confianza de contar con un
+                sistema que guía, corrige y acompaña cada ejercicio en tiempo
+                real.
+            </p>
+        </div>
+    </section>
+</Layout>
